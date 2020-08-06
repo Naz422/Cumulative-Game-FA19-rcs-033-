@@ -1,0 +1,17 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Cumulative Game_033",
+"productVersion": "0.1",
+"dataUrl": "Maru build files.data.unityweb",
+"wasmCodeUrl": "Maru build files.wasm.code.unityweb",
+"wasmFrameworkUrl": "Maru build files.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "Maru build files.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.13f1"
+}
