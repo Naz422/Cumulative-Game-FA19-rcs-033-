@@ -42,6 +42,7 @@ public class MainMenu : MonoBehaviour
     public void learntitems()
     {
         learnt_items.SetActive(true);
+        Main_Menu.SetActive(false);
 
     }
     public void linkpanel()
@@ -53,11 +54,34 @@ public class MainMenu : MonoBehaviour
     {
         Application.OpenURL("http://www.niazilab.com");
     }
+    //public void Quit()
+    //{
+    //  Application.Quit();
+    //}
     public void Quit()
     {
-        Application.Quit();
-    }
+        Debug.Log("quit");
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #elif UNITY_STANDALONE
+               Application.Quit();
+        #elif UNITY_WEBGL
+               Application.OpenURL("about:blank");
+        #endif
 
+    }
+    public void Exit()
+    {
+        Debug.Log("quit");
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #elif UNITY_STANDALONE
+                        Application.Quit();
+        #elif UNITY_WEBGL
+                        Application.OpenURL("about:blank");
+        #endif
+
+    }
 
     //3 buttons of ml agents
     public void Penguin()
@@ -69,7 +93,7 @@ public class MainMenu : MonoBehaviour
         Humming_bird.SetActive(true);
         Main_Menu.SetActive(false);
     }
-    
+
 
     public void backml()
     {
@@ -90,11 +114,12 @@ public class MainMenu : MonoBehaviour
 
     public void backtomlagents()
     {
+        Debug.Log("heloo");
         Ml_selection.SetActive(true);
-        Main_Menu.SetActive(false);
+        Humming_bird.SetActive(false);
     }
-   
-    
+
+
     // button of computational model
 
     public void palindromelanguageclicked()
@@ -128,7 +153,7 @@ public class MainMenu : MonoBehaviour
     }
 
     // for closing course panel,link panel, language panels
-   
+
     public void PalindromeLanguagescross()
     {
         palindrom_language.SetActive(false);
@@ -143,8 +168,9 @@ public class MainMenu : MonoBehaviour
 
     public void crossLearntItems()
     {
-        learnt_items.SetActive(false);
         Main_Menu.SetActive(true);
+        learnt_items.SetActive(false);
+
     }
 
 
